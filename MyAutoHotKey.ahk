@@ -140,20 +140,6 @@ return
 	}
 return
 
-
-Esc::
-   Keywait, Esc, U ;ここで1回目のキーが押し上げられるのを待ちます
-   Keywait, Esc, D T0.2 ;0.2秒待ちます．この間にEscが押されれば成功＝0，失敗なら1がErrorLevelにはいります．
-   If (ErrorLevel=1) ;直前のコマンド＝Keywaitがタイムアウトで失敗＝1なら
-      {
-      Send,{Esc}
-      }
-   else
-      {
-      Send, WinMinimizeAll
-      }
-   return
-
 ; Note: From now on whenever you run AutoHotkey directly, this script
 ; will be loaded.  So feel free to customize it to suit your needs.
 
