@@ -22,14 +22,13 @@ else
 	Run Notepad
 return
 
-
-#IfWinActive ahk_exe chrome.exe
+#If WinActive("ahk_exe chrome.exe") || WinActive("ahk_exe TortoiseGitProc.exe") || WinActive("ahk_exe Clibor.exe")
   ^y::^v
   ^q::^w
   ^b::Send,{Left}
   ^f::Send,{Right}
   ^p::Send,{Up}
-  ^n::Send,{Doqwn}
+  ^n::Send,{Down}
   ^d::Send,{Delete}
   ^a::Send,{Home}
   ^e::Send,{End}
@@ -137,6 +136,7 @@ return
   ^m::Send,{Enter}
   Tab::Send, {Down}
 return
+
 
 #Include lib\IME.ahk
 
