@@ -123,6 +123,21 @@ return
   ^m::Send,{Enter}
 return
 
+#IfWinActive ahk_exe mom9.exe
+  ^y::^v
+  ^w::^x
+  ^b::Send,{Left}
+  ^f::Send,{Right}
+  ^p::Send,{Up}
+  ^n::Send,{Down}
+  ^d::Send,{Delete}
+  ^a::Send,{Home}
+  ^e::Send,{End}
+  ^h::Send,{Backspace}
+  ^m::Send,{Enter}
+  Tab::Send, {Down}
+return
+
 #Include lib\IME.ahk
 
 #IfWinNotActive ahk_class Emacs
